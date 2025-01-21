@@ -1,27 +1,25 @@
 ---
-title: 'SeqMetrics: a unified library for performance metrics calculation in Python'
+title: 'AquaFetch: A Unified Python Interface for Water Resource Dataset Acquisition and Harmonization'
 tags:
   - Python
   - modeling
-  - errors
-  - performance metrics
-  - data analysis
+  - hydrology
+  - data
+  - water
 authors:
-  - name: Fazila Rubab
-    affiliation: 1
-    orcid: 0009-0004-9040-3459
-  - name: Sara Iftikhar
-    orcid: 0000-0001-7446-6805
-    affiliation: 1
   - name: Ather Abbas
     orcid: 0000-0002-0031-745X
-    affiliation: 2
+    affiliation: 1
+  - name: Sara Iftikhar
+    affiliation: 1
+    orcid: 0000-0001-7446-6805
+  - name: Hylke E. Beck
+    orcid: 0000-0002-0031-745X
+    affiliation: 1
 affiliations:
- - name: Environmental AI Research Group, National Univsersity of Sciences and Technology, Islamabad, Pakistan
-   index: 1
  - name: King Abdullah University of Science and Technology, Thuwal, Saudi Arabia
-   index: 2
-date: 17 Febuary 2024
+   index: 1
+date: 21 January 2025
 bibliography: paper.bib
 ---
 
@@ -51,7 +49,7 @@ Ultimately, we hope this package will foster the development of benchmark datase
 
 
 
-# Implementation and Archiecture (do we need it?)
+# Implementation and Archiecture
 The AquaFetch package is structured using both functional and Object-Oriented Programming (OOP) designs. The OOP design is employed for handling more complex datasets within the `rr` and `wq` submodules, while simpler datasets are managed through a functional interface. The package's code is logically organized, with `rr`, `wq`, and `wwt` subdirectories present in both the source code (aqua_fetch) and tests directories. All public classes and functions are accessible from the parent directory, allowing for straightforward imports as shown below:
 
 ```python
@@ -77,7 +75,7 @@ Another feature of the AquaFetch is the optional inclusion of static and dynamic
 
 ## Duplicate datasets
 Certain datasets in our package feature overlapping stations from the same region. For example, both the Bull [@bull_senent2024] and Spain datasets both cover Spain. However, the Bull dataset was introduced by by Aparicio et al. (2024) [@bull_senent2024], whereas the Spain dataset was introduced in our work. The Spain dataset contains more stations, totaling 889, while the Bull dataset includes 484 stations.
-Similarly, both the CABra [@cabra_almagro2021] and CAMELS_BR [@camels_br] datasets cover Brazil and have been published in peer-reviewed journals. However, they differ in their temporal coverage and the number of static and dynamic features. Furthermore, Denmark is covered by two datasets, Caravan_DK [@koch_dk0] and CAMELS_DK [@camels_dk_Liu2024], which differ in temporal coverage and the number of static and dynamic features. 
+Similarly, both the CABra [@cabra_almagro2021] and CAMELS_BR [@camels_br] datasets cover Brazil and have been published in peer-reviewed journals. However, they differ in their temporal coverage and the number of static and dynamic features. Furthermore, Denmark is covered by two datasets, Caravan_DK [@caravan_dk_koch2023] and CAMELS_DK [@camels_dk_Liu2024], which differ in temporal coverage and the number of static and dynamic features. 
 The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. However, we identified issues with the observed streamflow data for the US in HYSETS. As a result, we introduced the USGS class, which focuses specifically on the US region. The catchment boundaries, static features, and meteorological data for USGS, however, are still obtained from HYSETS.
 
 
