@@ -14,6 +14,7 @@ authors:
     affiliation: 1
     orcid: 0000-0001-7446-6805
   - name: Hylke E. Beck
+    corresponding: true
     orcid: 0000-0002-0031-745X
     affiliation: 1
 affiliations:
