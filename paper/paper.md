@@ -80,8 +80,8 @@ The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. Ho
 
 
 \label{Table 1} Summary of rainfall-runoff datasets covered in AquaFetch package. 
-| Name           | Num. of daily stations | Num. of hourly stations | Num. of dynamic features | Num. of static features | Temporal Coverage | Spatial Coverage                            | Reference               |
-|----------------|:----------------------:|:-----------------------:|:------------------------:|:-----------------------:|-------------------|---------------------------------------------|-------------------------|
+| Name |Daily stations|Hourly stations|Dynamic features|Static features|Temporal Coverage|Spatial Coverage|Reference|
+|------|:---------:|:----------:|:------------:|:-----------:|------------|----------|------------------------------|
 | Arcticnet      | 106                    |                         | 27                       | 35                      | 1979--2003       | Arctic (Russia)                             | [R-Arcticnet](https://www.r-arcticnet.sr.unh.edu/v4.0/AllData/index.html)                                   |
 | Bull           | 484                    |                         | 55                       | 214                     | 1990--2020       | Spain                                       | [Aparicio et al., 2024](https://doi.org/10.1038/s41597-024-03594-5)                                         |
 | CABra          | 735                    |                         | 12                       | 97                      | 1980--2010       | Brazil                                      | [Almagro et al., 2021](https://doi.org/10.5194/hess-25-3105-2021)                                           |
@@ -119,8 +119,8 @@ The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. Ho
 The `wq` submodule contains datasets that represent surface water chemistry at various locations worldwide. Currently, it includes 16 water quality datasets, but we anticipate this number will increase in the future. The spatial and temporal coverage of these datasets are detailed in \ref{Table 2} while the exact location of measuring stations are depicted in (\autoref{fig2}).
 
 \label{Table 2} Summary of water quality datasets covered in AquaFetch package.
-| Name                      | Variables Covered | Temporal Coverage | Spatial Coverage          | Reference               |
-|---------------------------|:-----------------:|-------------------|---------------------------|-------------------------|
+| Name                    | Variables Covered | Temporal Coverage | Spatial Coverage      | Reference               |
+|-------------------------|:-----------------:|-------------------|-----------------------|-------------------------|
 | SWatCh                    | 24                | 1960--2022        | Global                    | [Lobke et al., 2022](https://doi.org/10.5194/essd-14-4667-2022)                    |
 | GRQA                      | 42                | 1898--2020        | Global                    | [Virro et al., 2021](https://essd.copernicus.org/articles/13/5483/2021/)           |
 | Quadica                   | 10                | 1950--2018        | Germany                   | [Ebeling et al., 2022 ](https://essd.copernicus.org/articles/14/3715/2022/)        |
@@ -144,8 +144,8 @@ The `wq` submodule contains datasets that represent surface water chemistry at v
 The `wwt` submodule contains data from approximately 22,471 experiments focused on the removal of various contaminants from wastewater using treatment strategies such as adsorption, photocatalysis, and sonolysis. This submodule provides a unified interface to access all this data, which is scattered across the literature, in a standardized format using a few Python functions. It is important to note that we do not introduce this data since this data has already been utilized and analyzed in various peer-reviewed scientific publications. However, we offer a simple and easy-to-use interface to access this existing data. The availability of such a large corpus of experimental data can significantly aid in data-driven modeling and material discovery. A summary of these datasets is provided in \ref{Table 3}. A summary of these datasets is provided in \ref{table 4}.
 
 \label{Table 3} Summary of wastewater treatment datasets covered in the package
-| Treatment Process         | Parameters         |          Target Pollutant      | Data Points | Reference             |
-|---------------------------|:------------------:|--------------------------------|:-----------:|-----------------------|
+| Treatment Process         | Parameters         |          Target Pollutant      | Data Points | Reference         |
+|---------------------------|:------------------:|--------------------------------|:-----------:|-------------------|
 | Adsorption        | 26         | Emerg. Contaminants            | 3,757       | [Jaffari et al., 2023](https://doi.org/10.1016/j.cej.2023.143073)          |
 | Adsorption        | 15         | Cr                             | 219         | [Ishtiaq et al., 2024](https://doi.org/10.1016/j.jece.2024.112238)         |
 | Adsorption        | 30         | Heavy Metals                   | 1,518       | [Jaffari et al., 2023 ](https://doi.org/10.1016/j.jhazmat.2023.132773)     |
