@@ -145,8 +145,8 @@ The `wwt` submodule contains data from approximately 22,471 experiments focused 
 
 \label{Table 3} Summary of wastewater treatment datasets covered in the package
 
-| Treatment Process | Parameters |          Target Pollutant      | Data Points | Reference                                                                  |
-|-------------------|:----------:|:------------------------------:|-------------|----------------------------------------------------------------------------|
+| Treatment Process         | Parameters         |          Target Pollutant      | Data Points | Reference         |
+|---------------------------|:------------------:|--------------------------------|:-----------:|-------------------|
 | Adsorption        | 26         | Emerg. Contaminants            | 3,757       | [Jaffari et al., 2023](https://doi.org/10.1016/j.cej.2023.143073)          |
 | Adsorption        | 15         | Cr                             | 219         | [Ishtiaq et al., 2024](https://doi.org/10.1016/j.jece.2024.112238)         |
 | Adsorption        | 30         | Heavy Metals                   | 1,518       | [Jaffari et al., 2023 ](https://doi.org/10.1016/j.jhazmat.2023.132773)     |
