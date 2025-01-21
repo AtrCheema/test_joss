@@ -13,7 +13,7 @@ authors:
   - name: Sara Iftikhar
     affiliation: 1
     orcid: 0000-0001-7446-6805
-  - name: Hylke E. Beck
+  - name: Hylke Beck
     orcid: 0000-0002-0031-745X
     affiliation: 1
 affiliations:
