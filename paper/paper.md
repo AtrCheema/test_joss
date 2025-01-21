@@ -61,13 +61,13 @@ The AquaFetch package is structured using both functional and Object-Oriented Pr
 Datasets are downloaded upon the first call to the respective function or class. The data is saved locally and will not be redownloaded unless the user explicitly requests it to be overwritten. The package also leverages parallel processing to expedite the downloading and parsing of large datasets in the `rr` submodule, significantly speeding up data retrieval when multiple CPU cores are available.
 
 # Rainfall Runoff datasets
-\ref{Table 1} provides a comprehensive list of the 32 rainfall-runoff datasets currently covered by the package. These datasets include series such as CAMELS [@camels_addor_2017] and LamaH [@lamahce_klingler], published over the last decade and offering data for specific countries or regions. The GRDC-Caravan is the only dataset providing data from catchments globally (\autoref{fig1}). These datasets consist of three types of data: time series, tabular, and catchment shapefiles. The static catchment features are presented as tabular data, where each row corresponds to one catchment and each column to one static feature. The dynamic features of catchments include time series of meteorological data and observed streamflow, available at daily or hourly timesteps.
+\ref{tbl:table1} provides a comprehensive list of the 32 rainfall-runoff datasets currently covered by the package. These datasets include series such as CAMELS [@camels_addor_2017] and LamaH [@lamahce_klingler], published over the last decade and offering data for specific countries or regions. The GRDC-Caravan is the only dataset providing data from catchments globally (\autoref{fig1}). These datasets consist of three types of data: time series, tabular, and catchment shapefiles. The static catchment features are presented as tabular data, where each row corresponds to one catchment and each column to one static feature. The dynamic features of catchments include time series of meteorological data and observed streamflow, available at daily or hourly timesteps.
 
 ![Locations of catchment gauge stations covered by each of the 32 rainfall-runoff datasets\label{fig1}](rr_stations.png)
 
 In addition to published datasets, this package introduces 10 new datasets for rainfall-runoff modeling. These datasets have not yet been published but follow the CAMELS dataset series convention. They include Ireland, Finland, Italy, Poland, Portugal, Japan, Thailand, Arcticnet, Spain, and the USGS. The observed streamflow data are sourced from the national meteorological or hydrological websites of the respective countries. Catchment boundaries and meteorological data for Ireland, Finland, Italy, Poland, and Portugal are obtained from EStreams [@estreams_do2024], and similarly for Japan, Thailand, Arcticnet, and Spain from GSHA [@gsha_yin2024]. For USGS, the catchment boundaries are sourced from HYSETS [@hysets_arsenault2020].
 
-All datasets listed in \ref{Table 1} are accessible via the `RainfallRunoff` class, which allows for a unified and consistent approach to each dataset. The class provides several methods to access static features, dynamic features, or catchment boundaries. Although the raw data files for each dataset may come in different formats, the methods to access these features through the `RainfallRunoff` class remain the same. Individual classes for each dataset are also available and may offer more control to users over specific datasets. However, for most cases, the use of the `RainfallRunoff` class will suffice.
+All datasets listed in\ref{tbl:table1} are accessible via the `RainfallRunoff` class, which allows for a unified and consistent approach to each dataset. The class provides several methods to access static features, dynamic features, or catchment boundaries. Although the raw data files for each dataset may come in different formats, the methods to access these features through the `RainfallRunoff` class remain the same. Individual classes for each dataset are also available and may offer more control to users over specific datasets. However, for most cases, the use of the `RainfallRunoff` class will suffice.
 
 The naming and units of dynamic features in each dataset may vary. However, we have standardized these features using the formula `name_unit_specifier` for each dynamic feature across all datasets. In this formula, the specifier can indicate the source (such as ERA5 or MSWEP for precipitation), the method used to calculate the feature (like makkink or penman for evapotranspiration), or the aggregation type (min, max, mean). For example, a precipitation dynamic feature from MSWEP would be labeled as pcp_mm_mswep. This approach ensures that feature names are representative and understandable. Dynamic features for which this method is inapplicable retain their original names.
 
@@ -78,11 +78,8 @@ Certain datasets in our package feature overlapping stations from the same regio
 Similarly, both the CABra [@cabra_almagro2021] and CAMELS_BR [@camels_br] datasets cover Brazil and have been published in peer-reviewed journals. However, they differ in their temporal coverage and the number of static and dynamic features. Furthermore, Denmark is covered by two datasets, Caravan_DK [@caravan_dk_koch2023] and CAMELS_DK [@camels_dk_Liu2024], which differ in temporal coverage and the number of static and dynamic features. 
 The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. However, we identified issues with the observed streamflow data for the US in HYSETS. As a result, we introduced the USGS class, which focuses specifically on the US region. The catchment boundaries, static features, and meteorological data for USGS, however, are still obtained from HYSETS.
 
-
-\label{Table 1} Summary of rainfall-runoff datasets covered in AquaFetch package. 
-
 | Name |Daily stations|Hourly stations|Dynamic features|Static features|Temporal Coverage|Spatial Coverage|Reference|
-|------|:---------:|:----------:|:------------:|:-----------:|------------|----------|------------------------------|
+|------|----------:|:----------:|:------------:|:-----------:|------------|----------|------------------------------|
 | Arcticnet      | 106                    |                         | 27                       | 35                      | 1979--2003       | Arctic (Russia)                             | [R-Arcticnet](https://www.r-arcticnet.sr.unh.edu/v4.0/AllData/index.html)                                   |
 | Bull           | 484                    |                         | 55                       | 214                     | 1990--2020       | Spain                                       | [Aparicio et al., 2024](https://doi.org/10.1038/s41597-024-03594-5)                                         |
 | CABra          | 735                    |                         | 12                       | 97                      | 1980--2010       | Brazil                                      | [Almagro et al., 2021](https://doi.org/10.5194/hess-25-3105-2021)                                           |
@@ -116,10 +113,10 @@ The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. Ho
 | USGS           | 12004                  | 1541                    | 5                        | 27                      | 1950--2018       | USA                                         | [USGS nwis](https://waterdata.usgs.gov/nwis)                                                                |
 | WaterBenchIowa | 125                    |                         | 3                        | 7                       | 2011--2018       | Iowa (USA)                                  | [Demir et al., 2022](https://doi.org/10.5194/essd-14-5605-2022)                                             |
 
+Table:  Summary of rainfall-runoff datasets covered in AquaFetch package \label{tbl:table1}
+
 # Water Quality datasets
 The `wq` submodule contains datasets that represent surface water chemistry at various locations worldwide. Currently, it includes 16 water quality datasets, but we anticipate this number will increase in the future. The spatial and temporal coverage of these datasets are detailed in \ref{Table 2} while the exact location of measuring stations are depicted in (\autoref{fig2}).
-
-\label{Table 2} Summary of water quality datasets covered in AquaFetch package.
 
 | Name                    | Variables Covered | Temporal Coverage | Spatial Coverage      | Reference               |
 |-------------------------|:-----------------:|-------------------|-----------------------|-------------------------|
@@ -140,13 +137,15 @@ The `wq` submodule contains datasets that represent surface water chemistry at v
 | GRiMeDB                   | 18                | -                 | Global                    | [Stanley et al., 2023](https://doi.org/10.5194/essd-15-2879-2023)                  |
 | River Chemistry Siberia   | 30                | 1991--2012        | Siberia                   | [Liu et al., 2022](https://doi.org/10.1038/s41597-022-01844-y)                     |
 
+Table:  Summary of water quality datasets covered in AquaFetch package \label{tbl:table2}
+
 ![Locations of measuring stations of water quality datasets\label{fig2}](wq_stations.png)
 
 # Wastewater treatment datasets
 The `wwt` submodule contains data from approximately 22,471 experiments focused on the removal of various contaminants from wastewater using treatment strategies such as adsorption, photocatalysis, and sonolysis. This submodule provides a unified interface to access all this data, which is scattered across the literature, in a standardized format using a few Python functions. It is important to note that we do not introduce this data since this data has already been utilized and analyzed in various peer-reviewed scientific publications. However, we offer a simple and easy-to-use interface to access this existing data. The availability of such a large corpus of experimental data can significantly aid in data-driven modeling and material discovery. A summary of these datasets is provided in \ref{tbl:table4}.
 
-| Treatment Process         | Parameters         |          Target Pollutant      | Data Points | Reference         |
-|---------------------------|:------------------:|--------------------------------|:-----------:|-------------------|
+| Treatment Process        | Parameters        |        Target Pollutant      | Data Points | Reference             |
+|--------------------------|:-----------------:|------------------------------|:-----------:|-----------------------|
 | Adsorption        | 26         | Emerg. Contaminants            | 3,757       | [Jaffari et al., 2023](https://doi.org/10.1016/j.cej.2023.143073)          |
 | Adsorption        | 15         | Cr                             | 219         | [Ishtiaq et al., 2024](https://doi.org/10.1016/j.jece.2024.112238)         |
 | Adsorption        | 30         | Heavy Metals                   | 1,518       | [Jaffari et al., 2023 ](https://doi.org/10.1016/j.jhazmat.2023.132773)     |
@@ -159,26 +158,19 @@ The `wwt` submodule contains data from approximately 22,471 experiments focused 
 | Photocatalysis    | 11         | Melachite Green                | 1,200       | [Jaffari et a., 2023](https://doi.org/10.1016/j.jhazmat.2022.130031)       |
 | Photocatalysis    | 23         | Dyes                           | 1,527       | [Kim et al., 2024](https://doi.org/10.1016/j.jhazmat.2023.132995)          |
 | Photocatalysis    | 15         | 2,4,Dichlorophenoxyacetic acid | 1,044       | [Kim et al., 2024](https://doi.org/10.1016/j.jhazmat.2023.132995)          |
-| Photocatalysis    | -          | Multiple                       | 2,078       | [GitHub](https://gitlab.com/atrcheema/envai105)                            |
+| Photocatalysis    | 25         | Multiple                       | 2,078       | [GitHub](https://gitlab.com/atrcheema/envai105)                            |
 | Photocatalysis    | 8          | Tetracycline                   | 374         | [Abdi et al., 2022](https://doi.org/10.1016/j.chemosphere.2021.132135)     |
 | Photocatalysis    | 7          | TiO2                           | 446         | [Jiang et al., 2020](https://doi.org/10.1016/j.envres.2020.109697)         |
 | Photocatalysis    | 8          | Multiple                       | 457         | [Jiang et al., 2020](https://doi.org/10.3390/catal11091107)                |
 | sonolysis         | 6          | Cyanobacteria                  | 314         | [Jaffari et al., 2024](https://doi.org/10.1016/j.jhazmat.2024.133762)      |
 
-Table: Summary of wastewater treatment datasets covered in the package \label{tbl:table4}
+Table: Summary of wastewater treatment datasets covered in the package \label{tbl:table3}
 
 # Testing and dependencies
 The AquaFetch code is hosted on GitHub at https://github.com/hyex-research/AquaFetch. The package's core dependencies include requests [@requests], NumPy, and Pandas. xarray is utilized for saving data in netCDF5 [@NSF_Unidata_and_Davis_NetCDF-C] format, which is efficient for handling large datasets; however, this step is an optional dependency. Other optional dependencies include Matplotlib [@matplotlib] for plotting and visualization, openpyxl [@openpyxl] for parsing Microsoft Excel files, along with Shapely, Shapefile, and Fiona for processing shapefiles.
 The documentation for the package is available on ReadTheDocs at https://aquafetch.readthedocs.io, featuring several tutorials that outline its usage and capabilities.
 
 Adhering to the 'unit test' protocol, comprehensive testing has been implemented for all data classes and functions. Since downloading the datasets is time-consuming, the tests are conducted offline under the assumption that the datasets are already downloaded. These unit tests verify the number and types of parameters returned by the data functions.
-
-| Language | Typing          | Garbage Collected | Evaluation | Created |
-|----------|:---------------:|:-----------------:|------------|---------|
-| Haskell  | static, strong  | yes               | non-strict | 1990    |
-| Lua      | dynamic, strong | yes               | strict     | 1993    |
-| C        | static, weak    | no                | strict     | 1972    |
-
 
 # Acknowledgements
 For part of the analysis, we utilized the Shaheen~III supercomputer, managed by the Supercomputing Core Laboratory at King Abdullah University of Science and Technology (KAUST) in Thuwal, Saudi Arabia. Part of the research was supported by the KAUST/MEWA Strategic Partnership Agreement (SPA) for Water, under award numbers 6110 and 6111.
