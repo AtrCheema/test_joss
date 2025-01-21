@@ -79,7 +79,7 @@ Similarly, both the CABra [@cabra_almagro2021] and CAMELS_BR [@camels_br] datase
 The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. However, we identified issues with the observed streamflow data for the US in HYSETS. As a result, we introduced the USGS class, which focuses specifically on the US region. The catchment boundaries, static features, and meteorological data for USGS, however, are still obtained from HYSETS.
 
 | Name |Daily stations|Hourly stations|Dynamic features|Static features|Temporal Coverage|Spatial Coverage|Reference|
-|--------------|--------:|:--------:|:----------:|:---------:|----------|------------|------------------------------|
+|---------------|--------:|:--------:|:--------:|:--------:|------------|------------|------------------------------|
 | Arcticnet      | 106                    |                         | 27                       | 35                      | 1979--2003       | Arctic (Russia)                             | [R-Arcticnet](https://www.r-arcticnet.sr.unh.edu/v4.0/AllData/index.html)                                   |
 | Bull           | 484                    |                         | 55                       | 214                     | 1990--2020       | Spain                                       | [Aparicio et al., 2024](https://doi.org/10.1038/s41597-024-03594-5)                                         |
 | CABra          | 735                    |                         | 12                       | 97                      | 1980--2010       | Brazil                                      | [Almagro et al., 2021](https://doi.org/10.5194/hess-25-3105-2021)                                           |
