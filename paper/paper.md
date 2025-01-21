@@ -170,6 +170,29 @@ The documentation for the package is available on ReadTheDocs at https://aquafet
 
 Adhering to the 'unit test' protocol, comprehensive testing has been implemented for all data classes and functions. Since downloading the datasets is time-consuming, the tests are conducted offline under the assumption that the datasets are already downloaded. These unit tests verify the number and types of parameters returned by the data functions.
 
+| Language | Typing          | Garbage Collected | Evaluation | Created |
+|----------|:---------------:|:-----------------:|------------|---------|
+| Haskell  | static, strong  | yes               | non-strict | 1990    |
+| Lua      | dynamic, strong | yes               | strict     | 1993    |
+| C        | static, weak    | no                | strict     | 1972    |
+
+Another table
+
++-------------------+------------+----------+----------+
+| Header 1          | Header 2   | Header 3 | Header 4 |
+|                   |            |          |          |
++:=================:+:==========:+:========:+:========:+
+| row 1, column 1   | column 2   | column 3 | column 4 |
++-------------------+------------+----------+----------+
+| row 2             | cells span columns               |
++-------------------+------------+---------------------+
+| row 3             | cells      | - body              |
++-------------------+ span rows  | - elements          |
+| row 4             |            | - here              |
++===================+============+=====================+
+| Footer                                               |
++===================+============+=====================+
+
 # Acknowledgements
 For part of the analysis, we utilized the Shaheen~III supercomputer, managed by the Supercomputing Core Laboratory at King Abdullah University of Science and Technology (KAUST) in Thuwal, Saudi Arabia. Part of the research was supported by the KAUST/MEWA Strategic Partnership Agreement (SPA) for Water, under award numbers 6110 and 6111.
 
