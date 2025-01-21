@@ -1,26 +1,29 @@
 ---
-title: 'AquaFetch: A Unified Python Interface for Water Resource Dataset Acquisition and Harmonization'
+title: 'SeqMetrics: a unified library for performance metrics calculation in Python'
 tags:
   - Python
   - modeling
-  - hydrology
-  - data
-  - water
+  - errors
+  - performance metrics
+  - data analysis
 authors:
+  - name: Fazila Rubab
+    affiliation: 1
+    orcid: 0009-0004-9040-3459
+  - name: Sara Iftikhar
+    orcid: 0000-0001-7446-6805
+    affiliation: 1
   - name: Ather Abbas
     orcid: 0000-0002-0031-745X
-    affiliation: 1
-  - name: Sara Iftikhar
-    affiliation: 1
-    orcid: 0000-0001-7446-6805
-  - name: Hylke Beck
-    orcid: 0000-0002-0031-745X
-    affiliation: 1
+    affiliation: 2
 affiliations:
- - name: King Abdullah University of Science and Technology, Thuwal, Saudi Arabia
+ - name: Environmental AI Research Group, National Univsersity of Sciences and Technology, Islamabad, Pakistan
    index: 1
-date: 21 January 2025
+ - name: King Abdullah University of Science and Technology, Thuwal, Saudi Arabia
+   index: 2
+date: 17 Febuary 2024
 bibliography: paper.bib
+---
 
 
 # Summary 
