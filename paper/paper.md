@@ -144,8 +144,9 @@ The `wq` submodule contains datasets that represent surface water chemistry at v
 The `wwt` submodule contains data from approximately 22,471 experiments focused on the removal of various contaminants from wastewater using treatment strategies such as adsorption, photocatalysis, and sonolysis. This submodule provides a unified interface to access all this data, which is scattered across the literature, in a standardized format using a few Python functions. It is important to note that we do not introduce this data since this data has already been utilized and analyzed in various peer-reviewed scientific publications. However, we offer a simple and easy-to-use interface to access this existing data. The availability of such a large corpus of experimental data can significantly aid in data-driven modeling and material discovery. A summary of these datasets is provided in \ref{Table 3}.
 
 \label{Table 3} Summary of wastewater treatment datasets covered in the package
+
 | Treatment Process | Parameters |          Target Pollutant      | Data Points | Reference                                                                  |
-|-------------------|------------|--------------------------------|-------------|----------------------------------------------------------------------------|
+|-------------------|:----------:|:------------------------------:|-------------|----------------------------------------------------------------------------|
 | Adsorption        | 26         | Emerg. Contaminants            | 3,757       | [Jaffari et al., 2023](https://doi.org/10.1016/j.cej.2023.143073)          |
 | Adsorption        | 15         | Cr                             | 219         | [Ishtiaq et al., 2024](https://doi.org/10.1016/j.jece.2024.112238)         |
 | Adsorption        | 30         | Heavy Metals                   | 1,518       | [Jaffari et al., 2023 ](https://doi.org/10.1016/j.jhazmat.2023.132773)     |
