@@ -71,7 +71,7 @@ All datasets listed in Table \ref{tbl:table1} are accessible via the `RainfallRu
 
 The naming and units of dynamic features in each dataset may vary. However, we have standardized these features using the formula `name_unit_specifier` for each dynamic feature across all datasets. In this formula, the specifier can indicate the source (such as ERA5 or MSWEP for precipitation), the method used to calculate the feature (like makkink or penman for evapotranspiration), or the aggregation type (min, max, mean). For example, a precipitation dynamic feature from MSWEP would be labeled as pcp_mm_mswep. This approach ensures that feature names are representative and understandable. Dynamic features for which this method is inapplicable retain their original names.
 
-Another feature of the AquaFetch is the optional inclusion of static and dynamic features from EStreams and GSHA for all datasets listed in \ref{Table 1}. This is beneficial as EStreams and GSHA include several static and dynamic features calculated for the catchments, which are not included in other datasets. For instance, EStreams provides information on annual variation in land use for all European catchments, a feature not available in CAMELS-GB [@camels_gb] or other European datasets. This step is optional since it initiaties the download of GSHA and EStreams datasets which can be time-consuming and may not always be necessary.
+Another feature of the AquaFetch is the optional inclusion of static and dynamic features from EStreams and GSHA for all datasets listed in Table \ref{tbl:table1}. This is beneficial as EStreams and GSHA include several static and dynamic features calculated for the catchments, which are not included in other datasets. For instance, EStreams provides information on annual variation in land use for all European catchments, a feature not available in CAMELS-GB [@camels_gb] or other European datasets. This step is optional since it initiaties the download of GSHA and EStreams datasets which can be time-consuming and may not always be necessary.
 
 ## Duplicate datasets
 Certain datasets in our package feature overlapping stations from the same region. For example, both the Bull [@bull_senent2024] and Spain datasets both cover Spain. However, the Bull dataset was introduced by by Aparicio et al. (2024) [@bull_senent2024], whereas the Spain dataset was introduced in our work. The Spain dataset contains more stations, totaling 889, while the Bull dataset includes 484 stations.
@@ -162,7 +162,7 @@ The `wwt` submodule contains data from approximately 22,471 experiments focused 
 | Photocatalysis    | 8          | Tetracycline                   | 374         | [Abdi et al., 2022](https://doi.org/10.1016/j.chemosphere.2021.132135)     |
 | Photocatalysis    | 7          | TiO2                           | 446         | [Jiang et al., 2020](https://doi.org/10.1016/j.envres.2020.109697)         |
 | Photocatalysis    | 8          | Multiple                       | 457         | [Jiang et al., 2020](https://doi.org/10.3390/catal11091107)                |
-| sonolysis         | 6          | Cyanobacteria                  | 314         | [Jaffari et al., 2024](https://doi.org/10.1016/j.jhazmat.2024.133762)      |
+| Sonolysis         | 6          | Cyanobacteria                  | 314         | [Jaffari et al., 2024](https://doi.org/10.1016/j.jhazmat.2024.133762)      |
 
 Table: Summary of wastewater treatment datasets covered in the package \label{tbl:table3}
 
