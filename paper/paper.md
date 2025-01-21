@@ -80,6 +80,7 @@ The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. Ho
 
 
 \label{Table 1} Summary of rainfall-runoff datasets covered in AquaFetch package. 
+
 | Name |Daily stations|Hourly stations|Dynamic features|Static features|Temporal Coverage|Spatial Coverage|Reference|
 |------|:---------:|:----------:|:------------:|:-----------:|------------|----------|------------------------------|
 | Arcticnet      | 106                    |                         | 27                       | 35                      | 1979--2003       | Arctic (Russia)                             | [R-Arcticnet](https://www.r-arcticnet.sr.unh.edu/v4.0/AllData/index.html)                                   |
@@ -119,6 +120,7 @@ The HYSETS dataset [@hysets_arsenault2020] covers Mexico, the US, and Canada. Ho
 The `wq` submodule contains datasets that represent surface water chemistry at various locations worldwide. Currently, it includes 16 water quality datasets, but we anticipate this number will increase in the future. The spatial and temporal coverage of these datasets are detailed in \ref{Table 2} while the exact location of measuring stations are depicted in (\autoref{fig2}).
 
 \label{Table 2} Summary of water quality datasets covered in AquaFetch package.
+
 | Name                    | Variables Covered | Temporal Coverage | Spatial Coverage      | Reference               |
 |-------------------------|:-----------------:|-------------------|-----------------------|-------------------------|
 | SWatCh                    | 24                | 1960--2022        | Global                    | [Lobke et al., 2022](https://doi.org/10.5194/essd-14-4667-2022)                    |
@@ -141,9 +143,7 @@ The `wq` submodule contains datasets that represent surface water chemistry at v
 ![Locations of measuring stations of water quality datasets\label{fig2}](wq_stations.png)
 
 # Wastewater treatment datasets
-The `wwt` submodule contains data from approximately 22,471 experiments focused on the removal of various contaminants from wastewater using treatment strategies such as adsorption, photocatalysis, and sonolysis. This submodule provides a unified interface to access all this data, which is scattered across the literature, in a standardized format using a few Python functions. It is important to note that we do not introduce this data since this data has already been utilized and analyzed in various peer-reviewed scientific publications. However, we offer a simple and easy-to-use interface to access this existing data. The availability of such a large corpus of experimental data can significantly aid in data-driven modeling and material discovery. A summary of these datasets is provided in \ref{Table 3}. A summary of these datasets is provided in \ref{table4}.
-
-\label{Table 3} Summary of wastewater treatment datasets covered in the package
+The `wwt` submodule contains data from approximately 22,471 experiments focused on the removal of various contaminants from wastewater using treatment strategies such as adsorption, photocatalysis, and sonolysis. This submodule provides a unified interface to access all this data, which is scattered across the literature, in a standardized format using a few Python functions. It is important to note that we do not introduce this data since this data has already been utilized and analyzed in various peer-reviewed scientific publications. However, we offer a simple and easy-to-use interface to access this existing data. The availability of such a large corpus of experimental data can significantly aid in data-driven modeling and material discovery. A summary of these datasets is provided in \ref{tbl:table4}.
 
 | Treatment Process         | Parameters         |          Target Pollutant      | Data Points | Reference         |
 |---------------------------|:------------------:|--------------------------------|:-----------:|-------------------|
